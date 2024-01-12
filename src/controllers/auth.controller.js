@@ -40,7 +40,7 @@ export const register = async (req, res) => {
         });
 
         res.cookie("token", token, {
-            httpOnly: process.env.NODE_ENV !== "development",
+            httpOnly: false,
             secure: true,
             sameSite: "none",
         });
@@ -86,7 +86,7 @@ export const login = async (req, res) => {
         });
 
         res.cookie("token", token, {
-            httpOnly: process.env.NODE_ENV !== "development",
+            httpOnly: false,
             secure: true,
             sameSite: "none",
           });
